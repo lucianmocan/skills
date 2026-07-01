@@ -52,6 +52,7 @@ Immediately replace any of the following:
 | Inflated verbs | delve, leverage, utilize, facilitate, streamline, foster, harness, ensure, prioritize, aim |
 | Dramatic nouns | tapestry, landscape, realm, journey, beacon, cornerstone, ecosystem (metaphorical) |
 | Hedging openers | "It's worth noting that," "One might argue," "In the realm of" |
+| Parallel balance | "not only… but also," "both X and Y" (when the parallelism is forced) |
 | Cliché openers | "In today's digital landscape," "In an era of," "At its core" |
 | Overused AI verbs | aims, details, ensures, includes, involves, outlines, prioritizes |
 | -ability/-ibility bloat | accessibility, portability, adjustability, retractability (when a simpler word works) |
@@ -123,6 +124,12 @@ AI prefaces a section by announcing what it is about to discuss.
 - ❌ `Before discussing X, it is useful to look at Y.`
 - ❌ `To understand X, we first need to consider Y.`
 - ✓ Cut the announcement and open on the content directly. The section heading already signals the topic.
+
+### Meta-commentary on significance
+AI steps back after describing something to explain why it mattered, rather than trusting the reader.
+- ❌ `That rhythm mattered because…`
+- ❌ `This distinction is important because…`
+- ✓ Either build the significance into the description itself, or cut it — if the description is clear, the reader already understands why it matters.
 
 ---
 
