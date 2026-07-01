@@ -84,6 +84,35 @@ AI replaces precise technical terms with approximate synonyms, introducing error
 
 ---
 
+## Structural AI Patterns to Cut
+
+These are paragraph-level constructions AI inserts automatically. They are harder to catch than individual words.
+
+### Warm-up intro phrases
+AI rarely opens with the claim. It introduces the introduction first.
+- ❌ `A useful starting point is the idea of X.`
+- ❌ `It is worth considering X.`
+- ❌ `One key concept here is X.`
+- ✓ Just state X directly.
+
+### Paragraph-closing summary sentences
+AI ends paragraphs by restating what the paragraph just showed. If the examples already demonstrate the point, the summary is redundant — cut it.
+- ❌ `The details differ, but the goal is similar: [restatement of what was just described].`
+- ❌ `In each case, the underlying principle is the same.`
+- ✓ End on the last concrete fact. Let the reader draw the thread.
+
+### Scoping / narrowing sentences
+AI adds these at section ends to "transition" to a narrower focus.
+- ❌ `These mechanisms are relevant to the broader X landscape, but this project focuses on Y.`
+- ❌ `While all of these approaches matter, the focus here is Z.`
+- ✓ Either cut entirely and open the next section with the narrower topic, or state the scope in one blunt sentence: `This project focuses on ARM TrustZone.`
+
+### Generic transition openers
+- ❌ `Other X make different tradeoffs.` (says nothing about what the tradeoffs are)
+- ✓ Name the mechanism and immediately say what makes it different.
+
+---
+
 ## Voice and Rhythm Fixes
 
 **Add rhetorical questions** to create conversational flow and signal a thinking human:
@@ -105,12 +134,13 @@ AI replaces precise technical terms with approximate synonyms, introducing error
 ## Rewriting Protocol
 
 1. **Scan** for banned words (see table above) — replace all.
-2. **Check openers** — if 3+ consecutive sentences start with a subject noun/pronoun, restructure.
-3. **Check endings** — strip participial tails or move them front.
-4. **Check length** — if all sentences are 18–25 words, break or combine some.
-5. **Add contractions** where register allows.
-6. **Read aloud** — flag anything that sounds like a press release.
-7. **Verify technical terms** — confirm nothing was quietly swapped for an inaccurate synonym.
+2. **Check openers** — if 3+ consecutive sentences start with a subject noun/pronoun, restructure. Cut warm-up intro phrases ("A useful starting point is…", "It is worth noting that…").
+3. **Check endings** — strip participial tails or move them front. Cut paragraph-closing summary sentences that restate what the paragraph just showed.
+4. **Check transitions** — delete scoping sentences ("X is relevant, but this focuses on Y") and generic openers ("Other X make different tradeoffs") — replace with something concrete.
+5. **Check length** — if all sentences are 18–25 words, break or combine some.
+6. **Add contractions** where register allows.
+7. **Read aloud** — flag anything that sounds like a press release.
+8. **Verify technical terms** — confirm nothing was quietly swapped for an inaccurate synonym.
 
 ---
 
@@ -135,6 +165,6 @@ When generating fresh text, include these instructions:
 
 **Always cut:** moreover · furthermore · additionally · delve · leverage · utilize · facilitate · tapestry · realm · beacon · cornerstone · "It's worth noting" · "In today's landscape" · "At its core"
 
-**Always check:** sentence openers · -ing endings · sentence length distribution · first person absence · technical term accuracy
+**Always check:** sentence openers · -ing endings · sentence length distribution · first person absence · technical term accuracy · paragraph-closing summaries · scoping sentences · warm-up intros
 
 **Always add:** one short sentence per paragraph · one concrete detail · contractions where the register allows
