@@ -13,6 +13,8 @@ This skill works as instructions for any LLM tool (Claude Code, OpenCode, Codex,
 
 Provide a block of text to rewrite, or ask for an audit. When **rewriting**, apply the full protocol below. When **auditing**, flag each issue with a line-level note and offer a revised version.
 
+**Core constraint:** Remove AI patterns, never content. When cutting a scaffolding sentence (warm-up, summary, scoping), the information it carried — if any — must be folded into the surrounding prose, not dropped. If a paragraph feels thin after edits, that is a signal content was lost, not that the paragraph was already short.
+
 ---
 
 ## The Seven AI Writing Tells
@@ -111,6 +113,17 @@ AI adds these at section ends to "transition" to a narrower focus.
 - ❌ `Other X make different tradeoffs.` (says nothing about what the tradeoffs are)
 - ✓ Name the mechanism and immediately say what makes it different.
 
+### Enumeration pattern across paragraphs
+AI structures multi-point sections as prose lists: "One X… Another X… A third X…" as consecutive paragraph openers.
+- ❌ `One obvious example is memory safety.` / `Another approach is formal verification.` / `A third approach is sandboxing.`
+- ✓ Let the topic lead each paragraph: `Memory safety is the obvious place to start.` / `Formal verification takes a different route entirely.` / `Sandboxing takes a narrower goal: not correctness, but containment.`
+
+### Warm-up section openers
+AI prefaces a section by announcing what it is about to discuss.
+- ❌ `Before discussing X, it is useful to look at Y.`
+- ❌ `To understand X, we first need to consider Y.`
+- ✓ Cut the announcement and open on the content directly. The section heading already signals the topic.
+
 ---
 
 ## Voice and Rhythm Fixes
@@ -141,6 +154,7 @@ AI adds these at section ends to "transition" to a narrower focus.
 6. **Add contractions** where register allows.
 7. **Read aloud** — flag anything that sounds like a press release.
 8. **Verify technical terms** — confirm nothing was quietly swapped for an inaccurate synonym.
+9. **Check for lost content** — compare against the original; if a passage is shorter, confirm the missing material was pure scaffolding and not actual information that got dropped.
 
 ---
 
