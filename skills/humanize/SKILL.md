@@ -129,7 +129,41 @@ AI prefaces a section by announcing what it is about to discuss.
 AI steps back after describing something to explain why it mattered, rather than trusting the reader.
 - ❌ `That rhythm mattered because…`
 - ❌ `This distinction is important because…`
+- ❌ `This matters because…`
+- ❌ `These works support an important idea:` (followed by restating what the works already showed)
 - ✓ Either build the significance into the description itself, or cut it — if the description is clear, the reader already understands why it matters.
+
+### Procedural first-person enumeration
+AI narrates its own steps across paragraphs: "I first… I also… I then…". This creates a robotic step-log feel.
+- ❌ `I first studied recent work on this problem.` / `I also looked at more recent preprints.` / `I then explored a more verification-oriented version.`
+- ✓ Describe the work itself, not the sequence of doing it. Vary the opener: lead with what you found, what the approach was, or what changed — not with "I first/also/then."
+
+### In-principle / in-practice pivot
+AI introduces a complication by first establishing the ideal, then undercutting it.
+- ❌ `In principle, one could prove equivalence. In practice, this is hard.`
+- ✓ Usually the "in principle" half can be cut — just state the reality: `Proving equivalence is hard.` Add context for why only if the reader needs it.
+
+### Transition announcements
+AI announces a pivot rather than just making it.
+- ❌ `This led me to a different research question.`
+- ❌ `This brings us to the question of…`
+- ✓ Cut the announcement and open the next thought directly.
+
+### Relevance justification
+AI explains why it is mentioning something by saying it is "relevant to" the topic.
+- ❌ `Frameworks such as DSPy are relevant to this idea because…`
+- ✓ Just say what the framework does — the relevance is clear from the context.
+
+### Negation-then-clarification
+AI anticipates misreadings and corrects them preemptively.
+- ❌ `My goal was not to produce a complete port. It was to understand…`
+- ✓ State the goal directly: `The goal was to understand…`
+
+### Conclusion announcements
+AI labels its conclusion before stating it.
+- ❌ `My main takeaway is that…`
+- ❌ `The key insight here is that…`
+- ✓ State the conclusion directly without announcing it.
 
 ---
 
@@ -156,7 +190,8 @@ AI steps back after describing something to explain why it mattered, rather than
 1. **Scan** for banned words (see table above) — replace all.
 2. **Check openers** — if 3+ consecutive sentences start with a subject noun/pronoun, restructure. Cut warm-up intro phrases ("A useful starting point is…", "It is worth noting that…").
 3. **Check endings** — strip participial tails or move them front. Cut paragraph-closing summary sentences that restate what the paragraph just showed.
-4. **Check transitions** — delete scoping sentences ("X is relevant, but this focuses on Y") and generic openers ("Other X make different tradeoffs") — replace with something concrete.
+4. **Check transitions** — delete scoping sentences, transition announcements ("This led me to…"), relevance justifications ("X is relevant to this because…"), and generic openers. Replace with something concrete or cut entirely.
+4b. **Check narration** — if multiple paragraphs open with "I first / I also / I then," restructure so the work leads, not the sequence of doing it.
 5. **Check length** — if all sentences are 18–25 words, break or combine some.
 6. **Add contractions** where register allows.
 7. **Read aloud** — flag anything that sounds like a press release.
@@ -186,6 +221,6 @@ When generating fresh text, include these instructions:
 
 **Always cut:** moreover · furthermore · additionally · delve · leverage · utilize · facilitate · tapestry · realm · beacon · cornerstone · "It's worth noting" · "In today's landscape" · "At its core"
 
-**Always check:** sentence openers · -ing endings · sentence length distribution · first person absence · technical term accuracy · paragraph-closing summaries · scoping sentences · warm-up intros
+**Always check:** sentence openers · -ing endings · sentence length distribution · first person absence · technical term accuracy · paragraph-closing summaries · scoping sentences · warm-up intros · "in principle/in practice" pivots · transition announcements · conclusion announcements · procedural enumeration ("I first/also/then") · negation-then-clarification · relevance justifications
 
 **Always add:** one short sentence per paragraph · one concrete detail · contractions where the register allows
